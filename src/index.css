@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vilia Baby Spa - Soft & Feminine Design System */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  :root {
+    /* Pink Pastel - Primary */
+    --primary: 340 82% 76%;
+    --primary-foreground: 340 30% 20%;
+    
+    /* Soft Peach - Secondary */
+    --secondary: 20 100% 92%;
+    --secondary-foreground: 20 40% 25%;
+    
+    /* Mint - Accent */
+    --accent: 160 45% 85%;
+    --accent-foreground: 160 40% 20%;
+    
+    /* Background & Surface */
+    --background: 340 30% 98%;
+    --foreground: 340 20% 20%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 340 20% 20%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 20% 20%;
+    
+    /* Muted */
+    --muted: 340 20% 94%;
+    --muted-foreground: 340 10% 45%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Border & Input */
+    --border: 340 30% 90%;
+    --input: 340 30% 90%;
+    --ring: 340 82% 76%;
+    
+    --radius: 0.75rem;
+    
+    /* Sidebar */
+    --sidebar-background: 340 30% 97%;
+    --sidebar-foreground: 340 20% 25%;
+    --sidebar-primary: 340 82% 70%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 45% 90%;
+    --sidebar-accent-foreground: 160 40% 20%;
+    --sidebar-border: 340 30% 90%;
+    --sidebar-ring: 340 82% 76%;
+    
+    /* Custom Colors */
+    --rose: 340 82% 76%;
+    --rose-light: 340 82% 92%;
+    --peach: 20 100% 92%;
+    --peach-dark: 20 60% 75%;
+    --mint: 160 45% 85%;
+    --mint-dark: 160 45% 70%;
+    --lavender: 270 60% 90%;
+    --cream: 40 60% 95%;
+    
+    /* Success & Warning */
+    --success: 145 63% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --primary: 340 70% 65%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 20 50% 30%;
+    --secondary-foreground: 20 100% 92%;
+    
+    --accent: 160 40% 35%;
+    --accent-foreground: 160 45% 95%;
+    
+    --background: 340 20% 10%;
+    --foreground: 340 20% 95%;
+    
+    --card: 340 20% 12%;
+    --card-foreground: 340 20% 95%;
+    
+    --popover: 340 20% 12%;
+    --popover-foreground: 340 20% 95%;
+    
+    --muted: 340 15% 20%;
+    --muted-foreground: 340 10% 65%;
+    
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 340 20% 20%;
+    --input: 340 20% 20%;
+    --ring: 340 70% 65%;
+    
+    --sidebar-background: 340 20% 8%;
+    --sidebar-foreground: 340 20% 95%;
+    --sidebar-primary: 340 70% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 40% 25%;
+    --sidebar-accent-foreground: 160 45% 95%;
+    --sidebar-border: 340 20% 20%;
+    --sidebar-ring: 340 70% 65%;
+    
+    --rose: 340 70% 65%;
+    --rose-light: 340 50% 30%;
+    --peach: 20 50% 30%;
+    --peach-dark: 20 40% 45%;
+    --mint: 160 40% 35%;
+    --mint-dark: 160 40% 50%;
+    --lavender: 270 40% 35%;
+    --cream: 40 30% 20%;
+    
+    --success: 145 50% 35%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 70% 45%;
+    --warning-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50 shadow-lg;
+  }
+  
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--rose)) 0%, hsl(var(--peach)) 100%);
+  }
+  
+  .gradient-soft {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--rose-light)) 100%);
+  }
+  
+  .gradient-mint {
+    background: linear-gradient(135deg, hsl(var(--mint)) 0%, hsl(var(--accent)) 100%);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--rose)) 0%, hsl(var(--peach-dark)) 100%);
+  }
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: 0 4px 20px -4px hsl(var(--rose) / 0.2);
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 40px hsl(var(--rose) / 0.3);
+  }
+}
